@@ -47,6 +47,7 @@ Route::get('/schedule/getdata', [ScheduleController::class, 'getDataTransaksi'])
 Route::get('/login', [AuthController::class, 'getLogin']);
 Route::post('/login', [AuthController::class, 'postLogin'])->name('login');
 // Route::post('/login','AuthController@postLogin')->name('login');
+
 // Route::get('/home',function() {
 //     return view('tambahsewa');
 // })->name('home');

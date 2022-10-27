@@ -17,8 +17,10 @@ class AuthController extends Controller
     {
         if (Auth::guard('operator')->attempt(['nama' => $request->nama, 'password' => $request->password])) {
             $request->session()->put('nama', $request->nama);
+            //debug_to_console("Masuk");
             return redirect()->route('home');
         } else {
+            //debug_to_console("ga");
             return redirect()->back();
         }
     }
